@@ -1,10 +1,20 @@
+// import React from 'react';
+// import classes from './Modal.css';
+
+// const modal = (props) => (
+//     <div className={classes.Modal}>
+//         {props.children}
+//     </div>
+// );
+
+// export default modal;
+
 import React from 'react';
-import classes from './Modal.css';
+import classes from './Backdrop.css'
 
-const modal = (props) => (
-    <div className={classes.Modal}>
-        {props.children}
-    </div>
-);
 
-export default modal;
+const backdrop = (props) => {
+    return props.show ? <div className={classes.Backdrop} onClick={props.clicked}></div> : null
+}
+
+export default backdrop;
